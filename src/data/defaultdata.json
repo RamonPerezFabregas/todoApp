@@ -1,0 +1,14 @@
+[
+  {
+  "id"      : 0,
+  "todoTxt" : "Tarea1"
+  },
+  {
+    "id"      : 1,
+    "todoTxt" : "Tarea2"
+  },
+  {
+    "id"      : 2,
+    "todoTxt" : "Tarea3"
+  }
+]

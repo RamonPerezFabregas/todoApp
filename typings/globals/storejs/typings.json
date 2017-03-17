@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/0e50ed4cc33b26a7f3396cd61ed6e6d4ad9206ec/storejs/index.d.ts",
+    "raw": "registry:dt/storejs#1.3.0+20170124111302",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/0e50ed4cc33b26a7f3396cd61ed6e6d4ad9206ec/storejs/index.d.ts"
+  }
+}

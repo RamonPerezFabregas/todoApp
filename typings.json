@@ -1,0 +1,8 @@
+{
+  "name": "todo-app",
+  "dependencies": {},
+  "globalDependencies": {
+    "jquery": "registry:dt/jquery#1.10.0+20170123093700",
+    "storejs": "registry:dt/storejs#1.3.0+20170124111302"
+  }
+}

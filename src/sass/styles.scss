@@ -1,0 +1,133 @@
+$gutter:15px;
+$brandOrange: #ffce66;
+$brandGrey: #d5d5d5;
+$brandBlue: #223078;
+$bgColor: #f6f8fa;
+
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($top: 0, $left:0, $blur:0, $color:0, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin btUOC ($base-color){
+  @include rounded();
+  //padding: 0.4em 0.8em;
+  //border: none;
+  border-color: transparent;
+  cursor: pointer;
+  background-color: darken($base-color,5%);
+
+  &:hover {
+    background-color: lighten($base-color,5%);
+    outline: none;
+  }
+
+  &:focus {
+    background-color: darken($base-color,5%);
+    outline: none;
+  }
+
+}
+
+// ELEMENTS
+.btUOC-grey {
+  @include btUOC($brandGrey);
+}
+
+.btUOC-orange {
+  @include btUOC($brandOrange);
+}
+
+// GENERAL
+body {
+  color: #666;
+  background-color: $bgColor;
+}
+
+//HEADER
+header {
+  position: fixed;
+  z-index: 100;
+  width:100%;
+  top:0;
+  left:0;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 2px 5px 1px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 5px 1px rgba(0,0,0,0.4);
+
+  h1 {
+    text-align: center;
+  }
+
+  .alert {
+    margin-bottom: 0;
+  }
+
+  .newTodo-block {
+    padding:$gutter;
+    color: #fff;
+    background-color: $brandBlue;
+
+    label {
+      font-weight: bold;
+      padding-right:$gutter;
+    }
+    input[type="text"] {
+      margin-right: $gutter/2;
+      padding: 0.4em 0.8em;
+      border: none;
+      color: $brandBlue;
+      @include rounded();
+    }
+    .btUOC {
+      color: $brandBlue;
+
+      .glyphicon {
+        padding-left: $gutter/2;
+      }
+    }
+
+  }
+}
+
+// TODOLIST
+.todo-bloc {
+}
+.listUOC {
+  padding-top: 133px;
+  list-style: none;
+  padding-left: 0;
+  margin:0;
+
+  .listUOC-item {
+    border-bottom: 1px dotted lighten($brandBlue,50%);
+    overflow: auto;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .listUOC-item-todo {
+      padding:$gutter;
+      float: left;
+    }
+    .listUOC-item-removeBt {
+      margin:$gutter;
+      float: right;
+      padding: 0.4em 0.8em;
+    }
+  }
+}
